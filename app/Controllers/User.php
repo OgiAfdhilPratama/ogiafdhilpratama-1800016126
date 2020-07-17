@@ -2,13 +2,17 @@
 
 namespace App\Controllers;
 
+<<<<<<< HEAD
 use App\Models\M_user;
 
+=======
+>>>>>>> 1114ed5f2a6011e6929966af47ab8e63cc34e99b
 class User extends BaseController
 {
    public function index()
    {
       if (session()->get('user_nama') == '') {
+<<<<<<< HEAD
          session()->setFlashdata('gagal', 'Login Terlebih Dahulu');
          return redirect()->to(base_url('login'));
       }
@@ -61,8 +65,18 @@ class User extends BaseController
       ];
       $model->updateUser($data, $id);
       return redirect()->to('/user');
+=======
+         session()->setFlashdata('gagal', 'Anda belum login silahkan login terlebih dahulu');
+         return redirect()->to(base_url('Login'));
+      }
+      return view('User_view');
+>>>>>>> 1114ed5f2a6011e6929966af47ab8e63cc34e99b
    }
 
    //--------------------------------------------------------------------
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 1114ed5f2a6011e6929966af47ab8e63cc34e99b
